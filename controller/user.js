@@ -15,7 +15,7 @@ const getSingleuser = async(req,res)=>{
     try{
     const id = req.params.id
     const user = await User.findById(id)
-    res.json({"message":"book read successfully",user})}
+    res.json({"message":"user get successfully",user})}
     catch(err){
         console.error(err)
         res.status(500).json({"message":"internal server error"})
